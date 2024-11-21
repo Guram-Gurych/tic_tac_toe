@@ -1,27 +1,27 @@
 import os
+import pygame
+
+# Импортируем собственный класс Board и константыguram из модуля gameparts
+from gameparts import (
+    Board,
+    CELL_SIZE,
+    BOARD_SIZE,
+    WIDTH,
+    HEIGHT,
+    LINE_WIDTH,
+    BG_COLOR,
+    LINE_COLOR,
+    X_COLOR,
+    O_COLOR,
+    X_WIDTH,
+    O_WIDTH,
+    SPACE,
+)
 
 # Скрываем приветственное сообщение Pygame
 os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "1"
-import pygame
-
-# Импортируем собственный класс Board из модуля gameparts
-from gameparts import Board
-
 # Инициализируем библиотеку Pygame
 pygame.init()
-
-# Задаем основные параметры для игры
-CELL_SIZE = 100  # Размер клетки
-BOARD_SIZE = 3  # Размер игрового поля
-WIDTH = HEIGHT = CELL_SIZE * BOARD_SIZE  # Ширина и высота окна игры
-LINE_WIDTH = 15  # Толщина линий разделения
-BG_COLOR = (28, 170, 156)  # Цвет фона игрового поля
-LINE_COLOR = (23, 145, 135)  # Цвет линий игрового поля
-X_COLOR = (84, 84, 84)  # Цвет крестиков
-O_COLOR = (242, 235, 211)  # Цвет ноликов
-X_WIDTH = 15  # Толщина линий крестиков
-O_WIDTH = 15  # Толщина линий круга
-SPACE = CELL_SIZE // 4  # Отступы внутри клетки для рисунков
 
 # Создаем и настраиваем окно игры
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
