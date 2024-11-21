@@ -46,4 +46,5 @@
 
 ```shell
 python main.py
+```
 Результаты игры будут доступны в results.txt.
